@@ -1,7 +1,11 @@
 <p>testdata: {{ testdata }}</p>
 <p>user: {{ user }}</p>
 <p>repository: {{ repository }}</p>
-<p>branches: {{ branches }}</p>
+  <ul>
+    <li ng-repeat="branch in branches">
+      <span>branch: {{branch.name}}</span>
+    </li>
+  </ul>
 <p>repoTitle: {{ repoTitle }}</p>
 <p>branchTitle: {{ branchTitle }}</p>
 <p>branchContents: {{ branchContents }}</p>

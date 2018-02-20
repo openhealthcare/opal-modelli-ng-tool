@@ -14,18 +14,19 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.testdata = "testdata";
   $scope.user = new Gh3.User("openhealthcare");
   $scope.repository = new Gh3.Repository("clinical-data-modelling-dummy-repo", $scope.user);
-  $scope.repoTitle = "";
-  $scope.branchTitle = "";
-  $scope.branchContents = "";
-  $scope.rawContent = "";
+  $scope.repoTitle = $scope.repository.name;
 
   $scope.repository.fetch(function (err, res) {
     if(err) { throw "error" }
 
-    $scope.branches = $scope.repository.getBranches();
-    $scope.repository.fetchBranches(function (err, res) {
-      if(err) { throw "error" }
-      $scope.branch = $scope.repository.getBranchByName("master");
-    });
+
+    console.log($scope.repository.name);
+    debugger;
+
+    // $scope.repository.fetchBranches(function (err, res) {
+    //   if(err) { throw "error" }
+    //   $scope.branches = $scope.repository.getBranches();
+    //   $scope.branch = $scope.repository.getBranchByName("master");
+    // });
   });
 });

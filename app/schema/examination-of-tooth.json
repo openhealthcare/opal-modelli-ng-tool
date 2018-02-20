@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "openEHR-EHR-CLUSTER.exam_tooth.v0",
+  "description": "Recording of the examination of a single tooth",
+  "type": "object",
+  "properties": {
+    "clinical_description": {
+        "description": "Findings observed during the physical examination of a tooth",
+        "type": "string"
+    },
+    "examination_findings": {
+        "description": "Structured details about the physical examination findings",
+        "type": "string"
+    },
+    "multimedia_representation": {
+        "description": "Digital image, video or diagram representing the physical examination findings",
+        "type": "string"
+    },
+    "no_abnormality_detected": {
+      "description": "Statement that no abnormality was detected (NAD) on physical examination",
+      "type": "boolean"
+    },
+    "clinical_interpretation": {
+      "description": "Single word, phrase or brief description that represents the clinical meaning and significance of the physical examination findings",
+      "type": "string"
+    },
+    "comment": {
+      "description": "Additional narrative about the physical examination findings, not captured in other fields",
+      "type": "string"
+    },
+    "exam_not_done": {
+      "description": "Details to explicitly record that this examination was not performed",
+      "type": "string"
+    },
+  }
+}
