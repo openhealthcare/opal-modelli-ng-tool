@@ -15,5 +15,16 @@ angular.module('myApp.view1', ['ngRoute'])
           $scope.schema = res.data;
         });
   $scope.testdata = "testdata";
-
+  $scope.actions = {
+    "create_issue": {
+      "action_icon_class": "fab fa-github",
+      "action_text": "Create GitHub Issue",
+      "action_url": "#"
+    },
+    "edit": {
+      "action_icon_class": "fas fa-edit",
+      "action_text": "Edit on GitHub",
+      "action_url": "#"
+    }
+  };
 });
