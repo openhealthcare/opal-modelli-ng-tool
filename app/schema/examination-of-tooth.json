@@ -31,6 +31,6 @@
     "exam_not_done": {
       "description": "Details to explicitly record that this examination was not performed",
       "type": "string"
-    },
+    }
   }
 }
