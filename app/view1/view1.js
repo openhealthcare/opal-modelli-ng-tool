@@ -9,22 +9,22 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', function ($scope) {
-
+.controller('View1Ctrl', function($scope, $http) {
+  $http.get('schema/examination-of-tooth.json')
+       .then(function(res){
+          $scope.schema = res.data;
+        });
   $scope.testdata = "testdata";
-  $scope.user = new Gh3.User("openhealthcare");
-  $scope.repository = new Gh3.Repository("clinical-data-modelling-dummy-repo", $scope.user);
-  $scope.repoTitle = "";
-  $scope.branchTitle = "";
-  $scope.branchContents = "";
-  $scope.rawContent = "";
-
-  $scope.repository.fetch(function (err, res) {
-    if(err) { throw "error" }
-
-    $scope.repository.fetchBranches(function (err, res) {
-      if(err) { throw "error" }
-      $scope.branch = $scope.repository.getBranchByName("master");
-    });
-  });
+  $scope.actions = {
+    "create_issue": {
+      "action_icon_class": "fab fa-github",
+      "action_text": "Create GitHub Issue",
+      "action_url": "#"
+    },
+    "edit": {
+      "action_icon_class": "fas fa-edit",
+      "action_text": "Edit on GitHub",
+      "action_url": "#"
+    }
+  };
 });
