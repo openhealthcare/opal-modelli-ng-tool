@@ -11,20 +11,34 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function($scope, $http) {
   $http.get('schema/examination-of-tooth.json')
-       .then(function(res){
-          $scope.schema = res.data;
-        });
-  $scope.testdata = "testdata";
-  $scope.actions = {
+    .then(function(res){
+      $scope.schema = res.data;
+    });
+
+  // multiple row_actions can be defined here
+  $scope.row_actions = {
     "create_issue": {
       "action_icon_class": "fab fa-github",
-      "action_text": "Create GitHub Issue",
-      "action_url": "#"
-    },
+      "action_text": "Schema Feedback",
+      "action_url": "https://github.com/openhealthcare/opal-modelli-ng-tool/issues/new?template=schema-feedback.md"
+    }
+  };
+  // multiple panel_actions can be defined here
+  $scope.panel_actions = {
     "edit": {
       "action_icon_class": "fas fa-edit",
-      "action_text": "Edit on GitHub",
-      "action_url": "#"
+      "action_text": "Edit Schema on GitHub",
+      "action_url": "https://github.com/openhealthcare/opal-modelli-ng-tool/edit/master/app/schema/examination-of-tooth.json"
+    }
+  };
+  $scope.data_type_detail = {
+    "string": {
+      "human_name": "text",
+      "widget": "text"
+    },
+    "boolean": {
+     "human_name": "true/false",
+     "widget": "checkbox"
     }
   };
 });
