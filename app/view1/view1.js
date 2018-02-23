@@ -34,11 +34,13 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.data_type_detail = {
     "string": {
       "human_name": "text",
-      "widget": "text"
+      "widget": "text",
+      "widget_class": "form-control"
     },
     "boolean": {
      "human_name": "true/false",
-     "widget": "checkbox"
+     "widget": "checkbox",
+     "widget_class": ""
     }
   };
 });
