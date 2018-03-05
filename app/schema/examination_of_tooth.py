@@ -5,7 +5,6 @@ from django.db import models
 class ToothExam(models.Model):
     # implements: openEHR-EHR-CLUSTER.exam_tooth.v0.adl
     # source: https://github.com/odonto/datamodel/blob/master/archetypes-draft/
-    
     class Meta:
         # some meta fields I've made up
         verbose_name = "Tooth exam"
