@@ -14,3 +14,5 @@ Some of the issues we've tried to address are:
 The app is a very lightweight Angular.js application running entirely in the browser.
 
 https://openhealthcare.github.io/opal-modelli-ng-tool/app/
+
+![supported_by_apperta_lores.png](https://github.com/AppertaFoundation/apperta-image-assets/blob/master/supported_by_apperta_lores.png)
