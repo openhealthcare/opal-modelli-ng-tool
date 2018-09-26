@@ -1,21 +1,3 @@
-<div class="panel panel-primary">
-  <div class="panel-heading"><h4>{{ schema.title }}</h4></div>
-  <table class="table">
-    <tr>
-      <td>{{ schema.description }}</td>
-    </tr>
-    <tr>
-      <td ng-repeat="action in panel_actions" class="pull-right">
-        <a class="btn btn-default" href="{{action.action_url}}">
-          <i class="{{action.action_icon_class}}"></i>
-          {{ action.action_text }}
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div hljs>
 from django.db import models
 # a django model version of the same JSON schema
 
@@ -61,4 +43,3 @@ class ToothExam(models.Model):
         blank=True, null=True,
         help_text = "Details to explicitly record that this examination was not performed",
     )
-</div>

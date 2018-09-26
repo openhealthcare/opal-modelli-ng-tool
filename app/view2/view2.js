@@ -9,6 +9,15 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
-
-}]);
+.controller('View2Ctrl', function($scope) {
+  $scope.schema = {}
+  $scope.schema.title = "title";
+  $scope.schema.description = "description";
+  $scope.panel_actions = {
+    "test": {
+      "action_icon_class": "fa-check",
+      "action_text": "action_text",
+      "action_url": "#action_url"
+    }
+  }
+});
